@@ -9,7 +9,7 @@
 <body>
 
   <div id="myDIV">
-    <p>Hi haywey I wuv u</p>
+    <p id="pepe">Hi haywey I wuv u</p>
   </div>
 
   <a id="menu" onclick="myFunction();" href="#">Menu</a>
@@ -17,11 +17,16 @@
 
   <script>
     var i = document.getElementById("myDIV");
+    var j = document.getElementById("pepe")
     function myFunction(){
-      if (i.style.display === "none") {
-        i.style.display = "block";
+      if (i.style.height === "0em") {
+        i.style.height = "10em";
+        j.style.opacity = "1";
+        j.style.marginTop = "auto";
       } else {
-        i.style.display = "none";
+        i.style.height = "0em";
+        j.style.opacity = "0";
+        j.style.marginTop = "-2em";
       }
     }
   </script>
