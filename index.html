@@ -1,34 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>Document</title>
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      margin: auto;
+      height: 60vh;
+    }
+
+    h1 {
+      color: white;
+      margin: auto;
+      font-size: 1.5em;
+    }
+
+    #butt {
+      margin: auto;
+      width: 5em;
+      font-weight: bold;
+      height: 3em;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+    }
+
+    .h1-wrap {
+      display: flex;
+      margin-bottom: 1em;
+      width: fit-content;
+    }
+  </style>
 </head>
+
 <body>
 
-  <div id="myDIV">
-    <p id="pepe">Hi haywey I wuv u</p>
+  <div class="wrap">
+    <div class="h1-wrap">
+      <h1 id="se"> Kisser </h1>
+      <h1 id="ra">&nbsp;Cigarette&nbsp;</h1>
+      <h1 id="cl"> Giant </h1>
+    </div>
+    <button id="butt" onclick="picker()">Clike Here</button>
   </div>
 
-  <a id="menu" onclick="myFunction();" href="#">Menu</a>
-  
+  <script> ////////////////////
 
-  <script>
-    var i = document.getElementById("myDIV");
-    var j = document.getElementById("pepe")
-    function myFunction(){
-      if (i.style.height === "0em") {
-        i.style.height = "10em";
-        j.style.opacity = "1";
-        j.style.marginTop = "auto";
-      } else {
-        i.style.height = "0em";
-        j.style.opacity = "0";
-        j.style.marginTop = "-2em";
+    var randomRace = Math.floor(Math.random() * 5);
+    var randomClass = Math.floor(Math.random() * 8);
+    var randomSex = Math.floor(Math.random() * 2);
+    var raceText = document.getElementById("ra");
+    var classText = document.getElementById("cl");
+    var sexText = document.getElementById("se");
+    var button = document.getElementById("butt");
+
+    var picker = function () {
+      randomRace = Math.floor(Math.random() * 5);
+      randomClass = Math.floor(Math.random() * 8);
+      randomSex = Math.floor(Math.random() * 2);
+      switch(randomRace) {
+        case 1: 
+        raceText.innerHTML = "&nbsp;Human&nbsp;"
+        break;
+        case 2: 
+        raceText.innerHTML = "&nbsp;Charr&nbsp;"
+        break;
+        case 3: 
+        raceText.innerHTML = "&nbsp;Norn&nbsp;"
+        break;
+        case 4: 
+        raceText.innerHTML = "&nbsp;Sylvari&nbsp;"
+        break;
+        case 5: 
+        raceText.innerHTML = "&nbsp;Asura&nbsp;"
+        break;
       }
+      switch(randomClass) {
+        case 1: 
+        classText.innerHTML = "Warrior"
+        break;
+        case 2: 
+        classText.innerHTML = "Revenant"
+        break;
+        case 3: 
+        classText.innerHTML = "Elementalist"
+        break;
+        case 4: 
+        classText.innerHTML = "Mesmer"
+        break;
+        case 5: 
+        classText.innerHTML = "Necromancer"
+        break;
+        case 6: 
+        classText.innerHTML = "Ranger"
+        break;
+        case 7: 
+        classText.innerHTML = "Engineer"
+        break;
+        case 8: 
+        classText.innerHTML = "Thief"
+        break;
+      }
+      if (randomSex == 1) {
+        sexText.innerHTML = "Male"
+      } else {
+        sexText.innerHTML = "Female"
+      }
+
     }
+
   </script>
+
 </body>
+
 </html>
