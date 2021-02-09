@@ -65,50 +65,51 @@
       randomRace = Math.floor(Math.random() * 5);
       randomClass = Math.floor(Math.random() * 8);
       randomSex = Math.floor(Math.random() * 2);
+      console.log(randomSex, randomRace, randomClass)
       switch(randomRace) {
-        case 1: 
+        case 0: 
         raceText.innerHTML = "&nbsp;Human&nbsp;"
         break;
-        case 2: 
+        case 1: 
         raceText.innerHTML = "&nbsp;Charr&nbsp;"
         break;
-        case 3: 
+        case 2: 
         raceText.innerHTML = "&nbsp;Norn&nbsp;"
         break;
-        case 4: 
+        case 3: 
         raceText.innerHTML = "&nbsp;Sylvari&nbsp;"
         break;
-        case 5: 
+        case 4: 
         raceText.innerHTML = "&nbsp;Asura&nbsp;"
         break;
       }
       switch(randomClass) {
-        case 1: 
+        case 0: 
         classText.innerHTML = "Warrior"
         break;
-        case 2: 
+        case 1: 
         classText.innerHTML = "Revenant"
         break;
-        case 3: 
+        case 2: 
         classText.innerHTML = "Elementalist"
         break;
-        case 4: 
+        case 3: 
         classText.innerHTML = "Mesmer"
         break;
-        case 5: 
+        case 4: 
         classText.innerHTML = "Necromancer"
         break;
-        case 6: 
+        case 5: 
         classText.innerHTML = "Ranger"
         break;
-        case 7: 
+        case 6: 
         classText.innerHTML = "Engineer"
         break;
-        case 8: 
+        case 7: 
         classText.innerHTML = "Thief"
         break;
       }
-      if (randomSex == 1) {
+      if (randomSex == 0) {
         sexText.innerHTML = "Male"
       } else {
         sexText.innerHTML = "Female"
